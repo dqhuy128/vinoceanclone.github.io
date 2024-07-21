@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vinhomes Ocean Park</title>
+  <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/style.min.css" />
+</head>
+
+<body>
+  <div id="app">
+    <myheader style="background-color: #1f58a7;"></myheader>
+    <main>
+      <div class="position-relative swiper-matbang py-5">
+        <div class="container">
+          <!-- Swiper -->
+          <div class="swiper mySwiper pb-5">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" v-for="i in 29">
+                <div class="image-single">
+                  <img :src="'images/07/' + i + '.jpg'" alt="">
+                </div>
+              </div>
+            </div>
+            <!-- paginate -->
+            <div class="swiper-pagination"></div>
+            <!-- nav -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+    </main>
+    <myfooter></myfooter>
+  </div>
+  <script src="js/vue.js"></script>
+  <script src="js/httpvueloaders.js"></script>
+  <script src="libs/jquery/jquery-3.7.1.min.js"></script>
+  <script src="libs/bootstrap/popper.min.js"></script>
+  <script src="libs/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="libs/swiper/swiper-bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    var app = new Vue({
+      el: '#app',
+      components: {
+        myheader: httpVueLoader('vue_components/header.vue'),
+        myfooter: httpVueLoader('vue_components/footer.vue'),
+      },
+      mounted() {
+        $(window).bind('load', function () {
+          var swiper = new Swiper(".mySwiper", {
+            autoHeight: true,
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true
+            },
+          });
+        });
+      },
+    });
+  </script>
+</body>
+
+</html>
