@@ -1,42 +1,6 @@
 @charset "utf-8";
-@font-face {
-	font-family: svn-gilroy-bold;
-	src: url('../../font/ocp2/SVN-Gilroy Bold.otf') format('opentype');
-}
 
 @import 'https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap';
-@font-face {
-	src: url(../../font/ocp2/SVN-Gilroy-Bold.otf);
-	font-weight: 700;
-}
-
-@font-face {
-	src: url(../../font/ocp2/SVN-Gilroy-Light.otf);
-	font-weight: 400;
-}
-
-@font-face {
-	src: url(../../font/ocp2/Gilroy-SemiBold.ttf);
-	font-weight: 500;
-}
-
-@font-face {
-	font-family: svn-gotham;
-	src: url(../../font/ocp2/SVN-Gotham-Light.ttf);
-	font-weight: 400;
-}
-
-@font-face {
-	font-family: svn-gotham;
-	src: url(../../font/ocp2/SVN-Gotham-Bold.ttf) format('truetype');
-	font-weight: 700;
-}
-
-@font-face {
-	font-family: svn-gallery-modern;
-	src: url(../../font/ocp2/SVN-Gallery-Modern.otf);
-	font-weight: 400;
-}
 
 .residence-privileges .only-desktop img,
 .residence-privileges .only-mobile img {
